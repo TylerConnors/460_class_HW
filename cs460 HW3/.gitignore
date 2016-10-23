@@ -1,0 +1,7 @@
+.vs/**
+bin/**
+obj/**
+Properties/**
+App.config
+cs460 HW3.csproj
+cs460 HW3.sln
