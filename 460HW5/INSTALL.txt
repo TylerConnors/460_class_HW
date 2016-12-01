@@ -1,0 +1,7 @@
+You will need microsoft sql express and entity framework in order to run things properly.
+
+you will need to get a entity framework with the nuget packet manager as well.
+
+before you start you need to start the initDB.bat file in appdata. 
+
+after that connect tothe database file in visual studios.
