@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Page3";
+}
+
+<h2>Loan Calculator</h2>
+<p>Calculates your monthly payments by using the Principal, interest rate, and lenght of the loan.</p>
+<form method="post">
+    <label for="principal">Principal</label>
+    <input type="text" name="principal" value="" />
+    <label for="interest">Interest</label>
+    <input type="text" name="interest" value="" />
+    <label for="months">Months</label>
+    <input type="text" name="months" value="" />
+    <input type="submit" value="Enter" />
+</form>
+<p>@ViewBag.message</p>
