@@ -1,0 +1,48 @@
+﻿@model IEnumerable<_460HW5.Models.WOUForm> 
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<p>
+   @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().ID)</th>
+        <th>V number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date</th>
+        <th>Phone Number</th>
+        <th>Last Name</th>
+        <th>Catologue Year</th>
+        <th>Email</th>
+        <th>Major</th>
+        <th>Minor</th>
+        <th>Advisor</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(model => item.ID)</td>
+        <td>@Html.DisplayFor(model => item.VNum)</td>
+        <td>@Html.DisplayFor(model => item.First_Name)</td>
+        <td>@Html.DisplayFor(model => item.Last_Name)</td>
+        <td>@Html.DisplayFor(model => item.Date)</td>
+        <td>@Html.DisplayFor(model => item.Phone_Number)</td>
+        <td>@Html.DisplayFor(model => item.Catalog_Year)</td>
+        <td>@Html.DisplayFor(model => item.Email)</td>
+        <td>@Html.DisplayFor(model => item.Major)</td>
+        <td>@Html.DisplayFor(model => item.Minor)</td>
+        <td>@Html.DisplayFor(model => item.Advisor)</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
