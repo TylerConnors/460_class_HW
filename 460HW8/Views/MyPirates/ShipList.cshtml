@@ -1,0 +1,28 @@
+﻿@model IEnumerable<_460HW8.Models.Ship>
+@{
+    ViewBag.Title = "ShipList";
+}
+<h2>ShipList</h2>
+
+@*<p>
+       @Html.ActionLink("Create New", "CreateShip")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().ShipID)</th>
+        <th>Ship Name</th>
+        <th>Ship Type</th>
+        <th>Tonnage</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.ShipID)</td>
+            <td>@Html.DisplayFor(model => item.Name)</td>
+            <td>@Html.DisplayFor(model => item.Type)</td>
+            <td>@Html.DisplayFor(model => item.Tonnage)</td>
+        </tr>
+    }
+
+</table>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cs460_HW3
 {
-	public interface StackADT
+	public interface IStackADT
 	{
 
 /**

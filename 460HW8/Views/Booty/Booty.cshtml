@@ -1,0 +1,22 @@
+﻿@model IEnumerable<_460HW8.Models.Pirate>
+@{
+	ViewBag.Title = "Booty";
+}
+
+
+
+
+<h2>Booty</h2>
+<input id="request" type="button" name="request" value="Request" />
+
+<table id="ShowMyDamnValues" class="table"></table>
+
+
+
+
+@section PageScripts
+{
+<script src="~/scripts/jquery-1.10.2.js"></script>    
+<script src="~/scripts/RetrieveBooty.js"></script>
+<script src="~/scripts/jquery.dataTables.js"></script>
+}

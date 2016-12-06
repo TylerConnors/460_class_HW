@@ -1,0 +1,25 @@
+CREATE TABLE [dbo].[Pirate] (
+    [PirateID]  INT           IDENTITY (1, 1) NOT NULL,
+    [FirstName] NVARCHAR (50) DEFAULT ('Edward') NOT NULL,
+    [LastName]  NVARCHAR (50) DEFAULT ('Teach') NOT NULL,
+    [Date]      DATE          DEFAULT ('01/01/1600') NOT NULL,
+    PRIMARY KEY CLUSTERED ([PirateID] ASC)
+);
+
+CREATE TABLE [dbo].[Ship] (
+    [ShipID]  INT             IDENTITY (1, 1) NOT NULL,
+    [Name]    NVARCHAR (50)   DEFAULT ('Black Pearl') NOT NULL,
+    [Type]    NVARCHAR (50)   DEFAULT ('Wreck') NOT NULL,
+    [Tonnage] DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ShipID] ASC)
+);
+
+CREATE TABLE [dbo].[Crew] (
+    [CrewID]   INT             IDENTITY (1, 1) NOT NULL,
+    [PirateID] INT             NOT NULL,
+    [ShipID]   INT             NOT NULL,
+    [Booty]   DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CrewID] ASC),
+    CONSTRAINT [FK_ShipID] FOREIGN KEY ([ShipID]) REFERENCES [dbo].[Ship] ([ShipID]),
+    CONSTRAINT [FK_PirateID] FOREIGN KEY ([PirateID]) REFERENCES [dbo].[Pirate] ([PirateID])
+);
