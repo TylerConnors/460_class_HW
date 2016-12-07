@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Final460Take2.Models.AllCast>
+@{
+    ViewBag.Title = "AllCastList";
+}
+<h2>AllCastList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().AllCastID)</th>
+        <th>Actor</th>
+        <th>Movie</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.AllCastID)</td>
+            <td>@Html.DisplayFor(model => item.Actor.Name)</td>
+            <td>@Html.DisplayFor(model => item.Movie.Title)</td>
+        </tr>
+    }
+
+</table>
