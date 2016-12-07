@@ -12,11 +12,10 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Home", "Home", "MyPirates",  new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Pirates", "Index", "Pirates",  new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Ship", "ShipList", "MyPirates",  new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Crew", "CrewList", "MyPirates", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Booty", "Booty", "Booty", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Home", "default",  new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Artists", "index", "Artists",  new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("ArtWork", "ArtWorkList", "default",  new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Classification", "ClassificationList", "default", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

@@ -1,25 +1,32 @@
-CREATE TABLE [dbo].[Pirate] (
-    [PirateID]  INT           IDENTITY (1, 1) NOT NULL,
-    [FirstName] NVARCHAR (50) DEFAULT ('Edward') NOT NULL,
-    [LastName]  NVARCHAR (50) DEFAULT ('Teach') NOT NULL,
-    [Date]      DATE          DEFAULT ('01/01/1600') NOT NULL,
-    PRIMARY KEY CLUSTERED ([PirateID] ASC)
+CREATE TABLE [dbo].[Artist] (
+    [ArtistID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]     NVARCHAR (50) DEFAULT ('Unknown') NOT NULL,
+    [DOB]      DATE          DEFAULT ('01/01/1600') NOT NULL,
+    [City]     NVARCHAR (50) DEFAULT ('Unknown') NOT NULL,
+    PRIMARY KEY CLUSTERED ([ArtistID] ASC)
 );
 
-CREATE TABLE [dbo].[Ship] (
-    [ShipID]  INT             IDENTITY (1, 1) NOT NULL,
-    [Name]    NVARCHAR (50)   DEFAULT ('Black Pearl') NOT NULL,
-    [Type]    NVARCHAR (50)   DEFAULT ('Wreck') NOT NULL,
-    [Tonnage] DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
-    PRIMARY KEY CLUSTERED ([ShipID] ASC)
+CREATE TABLE [dbo].[ArtWork] (
+    [ArtWorkID] INT           IDENTITY (1, 1) NOT NULL,
+    [Title]     NVARCHAR (50) DEFAULT ('Untitled') NOT NULL,
+    [ArtistID]  INT           NOT NULL,
+    PRIMARY KEY CLUSTERED ([ArtWorkID] ASC),
+    CONSTRAINT [FK_ArtistID] FOREIGN KEY ([ArtistID]) REFERENCES [dbo].[Artist] ([ArtistID])
 );
 
-CREATE TABLE [dbo].[Crew] (
-    [CrewID]   INT             IDENTITY (1, 1) NOT NULL,
-    [PirateID] INT             NOT NULL,
-    [ShipID]   INT             NOT NULL,
-    [Booty]   DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
-    PRIMARY KEY CLUSTERED ([CrewID] ASC),
-    CONSTRAINT [FK_ShipID] FOREIGN KEY ([ShipID]) REFERENCES [dbo].[Ship] ([ShipID]),
-    CONSTRAINT [FK_PirateID] FOREIGN KEY ([PirateID]) REFERENCES [dbo].[Pirate] ([PirateID])
+CREATE TABLE [dbo].[Genre] (
+    [GenreID] INT           IDENTITY (1, 1) NOT NULL,
+    [Name]    NVARCHAR (50) DEFAULT ('Unknown') NOT NULL,
+    PRIMARY KEY CLUSTERED ([GenreID] ASC)
 );
+
+
+CREATE TABLE [dbo].[Classification]
+(
+    [ClassID] INT IDENTITY (1, 1) NOT NULL,
+    [ArtWorkID] INT             NOT NULL,
+    [GenreID]   INT             NOT NULL,
+    PRIMARY KEY CLUSTERED ([ClassID] ASC),
+    CONSTRAINT [FK_ArtWorkID] FOREIGN KEY ([ArtWorkID]) REFERENCES [dbo].[ArtWork] ([ArtWorkID]),
+    CONSTRAINT [FK_GenreID] FOREIGN KEY ([GenreID]) REFERENCES [dbo].[Genre] ([GenreID])
+)

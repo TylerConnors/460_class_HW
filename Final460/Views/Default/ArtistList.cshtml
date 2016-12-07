@@ -1,0 +1,26 @@
+﻿@model IEnumerable<>
+@{
+    ViewBag.Title = "CrewList";
+}
+<h2>CrewList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().CrewID)</th>
+        <th>Pirate ID</th>
+        <th>Ship ID</th>
+        <th>Booty</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>s
+            <td>@Html.DisplayFor(model => item.CrewID)</td>
+            <td>@Html.DisplayFor(model => item.PirateID)</td>
+            <td>@Html.DisplayFor(model => item.ShipID)</td>
+            <td>@Html.DisplayFor(model => item.Booty)</td>
+        </tr>
+    }
+
+</table>

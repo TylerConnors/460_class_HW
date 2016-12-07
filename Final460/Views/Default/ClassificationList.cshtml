@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Final460.Models.Classification>
+@{
+    ViewBag.Title = "ClassificationList";
+}
+<h2>ClassificationList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().ClassID)</th>
+        <th>Artwork</th>
+        <th>Genre</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.ClassID)</td>
+            <td>@Html.DisplayFor(model => item.ArtWorkID)</td>
+            <td>@Html.DisplayFor(model => item.GenreID)</td>
+        </tr>
+    }
+
+</table>

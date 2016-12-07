@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Final460.Models.ArtWork>
+@{
+    ViewBag.Title = "ArtWorkList";
+}
+<h2>ArtWorkList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().ArtWorkID)</th>
+        <th>Title</th>
+        <th>Artist</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.ArtWorkID)</td>
+            <td>@Html.DisplayFor(model => item.Title)</td>
+            <td>@Html.DisplayFor(model => item.ArtistID)</td>
+        </tr>
+    }
+
+</table>
