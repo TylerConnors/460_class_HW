@@ -30,5 +30,16 @@ namespace Final460Take2.Controllers
         {
             return View(db.Directors.ToList());
         }
+        public JsonResult Gimme(int actor)
+        {
+            //get the data from the server
+
+            var credits = from AllCasts in db.AllCasts
+           join Movies in db.Movies on AllCasts.MovieID equals Movies.MovieID
+           where AllCasts.ActorID == actor
+           select new { Title = AllCasts.Movie.Title, DirectorName = AllCasts.Movie.Director.Name };
+
+            return Json(credits, JsonRequestBehavior.AllowGet);
+        }
     }
 }

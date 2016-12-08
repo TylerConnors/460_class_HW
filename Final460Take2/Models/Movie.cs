@@ -20,9 +20,9 @@ namespace Final460Take2.Models
         [Required]
         [StringLength(50)]
         public string Title { get; set; }
-
+        [Required]
         public int Year { get; set; }
-
+        [Required]
         public int DirectorID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

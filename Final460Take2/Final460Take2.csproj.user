@@ -7,7 +7,7 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>Final460TylerConnors - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>MyWebPirateDatabase - Web Deploy</NameOfLastUsedPublishProfile>
     <WebStackScaffolding_DbContextTypeFullName>Final460Take2.Models.MyMovieContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
   </PropertyGroup>

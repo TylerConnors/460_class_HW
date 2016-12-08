@@ -143,6 +143,7 @@
     <Content Include="scripts\dygraph-combined-dev.js" />
     <Content Include="scripts\dygraph-combined.js" />
     <None Include="Properties\PublishProfiles\Final460TylerConnors - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\MyWebPirateDatabase - Web Deploy.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -155,7 +156,7 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="scripts\RetrieveBooty.js" />
+    <Content Include="scripts\getCredits.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
