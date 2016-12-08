@@ -2,7 +2,8 @@
     $(document).ready(function () {
         $("#request").click(function () {
             var a = $("#Number").val();
-            var source = "/Booty/Gimme/" + a;
+            console.log(a);
+            var source = "/Default/Gimme/" + a;
             console.log(source);
             // get data in JSON format from our controller
             $.ajax({
@@ -16,6 +17,8 @@
 
     function displayData(Data) 
     {
+        console.log(Data);
+        console.log(Data[2].Title);
         //make the table
         var MyTable = MyTable = '<tr><th>Title</th><th>Director</th></tr>';
         for(var i = 0; i <Data.length; i++)

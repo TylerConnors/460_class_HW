@@ -39,7 +39,7 @@ namespace Final460Take2.Controllers
            where AllCasts.ActorID == actor
            select new { Title = AllCasts.Movie.Title, DirectorName = AllCasts.Movie.Director.Name };
 
-            return Json(credits, JsonRequestBehavior.AllowGet);
+            return Json(credits.ToList(), JsonRequestBehavior.AllowGet);
         }
     }
 }

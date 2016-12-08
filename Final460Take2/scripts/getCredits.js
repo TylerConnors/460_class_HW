@@ -3,7 +3,7 @@
         $("#request").click(function () {
             var a = $("#Number").val();
             console.log(a);
-            var source = "/Booty/Gimme/" + a;
+            var source = "/Default/Gimme/" + a;
             console.log(source);
             // get data in JSON format from our controller
             $.ajax({
