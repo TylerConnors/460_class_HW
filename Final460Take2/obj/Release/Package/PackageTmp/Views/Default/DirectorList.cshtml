@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Final460Take2.Models.Director>
+@{
+    ViewBag.Title = "DirectorList";
+}
+<h2>ArtWorkList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>@Html.LabelFor(model => model.FirstOrDefault().DirectorID)</th>
+        <th>Name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.DirectorID)</td>
+            <td>@Html.DisplayFor(model => item.Name)</td>
+        </tr>
+    }
+
+</table>

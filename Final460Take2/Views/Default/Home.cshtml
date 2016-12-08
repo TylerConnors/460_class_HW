@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<center><h2>The Pirate Database</h2></center>
+<hr /><br />
+
+insert a number from one to four
+<form>
+    <input id="Number" name="Number" type="number" value="3" />
+    <input id="request" type="button" name="request" value="Request" />
+</form>
+
+<div id="ShowTheTable"></div>
+
+
+@section PageScripts
+{
+<script src="~/scripts/jquery-1.10.2.js"></script>    
+<script src="~/scripts/getCredits.js"></script>
+}
