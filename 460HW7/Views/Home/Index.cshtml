@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home</h2>
+
+
+<form>
+    <input id="sym" type="text" name="Stock Symbol" />
+    <input id="request" type="button" name="request" value="Request" />
+    <br />
+    Show Company Name as Well?
+    <input id="theradio" type="checkbox" name="getCompany" value="checked" />
+</form>
+
+<br />
+<hr />
+
+<div id="MyData"></div>
+<br />
+<div id="MyGraph"></div>
+
+
+@section PageScripts
+{
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/dygraph-combined-dev.js"></script>
+    <script type="text/javascript" src="~/Scripts/MyScript.js"></script>
+}
